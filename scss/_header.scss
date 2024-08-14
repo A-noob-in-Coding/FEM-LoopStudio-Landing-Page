@@ -1,0 +1,154 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.visible{
+    display: block;
+    width: 100vw;
+}
+
+.header{
+    padding: 0rem 5rem 0rem 5rem;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "logo nav-button"
+    "title title";
+    grid-template-columns: repeat(2,1fr);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)),url("/images/desktop/image-hero.jpg");
+    background-size: cover;
+    height: 70vh;
+    place-items: center;
+    .header__menu-btn{
+        grid-area: nav-button;
+        button{
+            border: none;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0.75rem;
+        .upper,
+        .mid,
+        .lower{
+            background-color: white;
+            width: 2rem;
+            height: 0.2rem;
+            transition: translate 0.5s ease, transform 0.5s ease;
+        }
+        &:hover{
+            .upper{
+                transform: rotate(-45deg);
+                translate: 0px 0.95rem;
+            }
+            .mid{
+                width: 0;
+            }
+            .lower{
+                transform: rotate(45deg);
+                translate: 0px -0.95rem;
+            }
+        }
+        }
+        display: none;
+    }
+    .header__logo{
+        grid-area: logo;
+        width: 100%;
+        img{
+            position: relative;
+            width: 60%;
+            height: auto;
+            display: block;
+        }
+        
+    }
+    .header__nav{
+        grid-area: nav-button;
+        width: 100%;
+        align-self: center;
+        .header__list{
+            @include flex(row,space-around,center);
+            .header__item{
+                a{
+                    position: relative;
+                    color: $White;
+                    font-family: $Font-2;
+                    font-size: clamp(0.5rem,1rem,1.5rem);
+                    padding-bottom: 0.25rem;
+                       &::after{
+                        background-color: $White;
+                        position: absolute;
+                        width: 0;
+                        content: "";
+                        bottom: 0;
+                        height: 0.1rem;
+                        right: 0;
+                        transition: width 0.3s ease;
+                    }
+                    &:hover::after,
+                    &:active::after,
+                    &:focus::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .header__title{
+        grid-area: title;
+        border: 2px solid $White;
+        padding: 1rem;
+        text-transform: uppercase;
+        font-weight: lighter;
+        line-height: 3.6rem;
+        color: $White;
+        font-family: $Font-2;
+        background: transparent;
+        justify-self: flex-start;
+        font-size: 3rem;
+        min-width: 30%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .header{
+        gap: 5rem;
+        height: 100vh;
+        padding: 2rem 1rem 0rem 1rem;
+        place-content: flex-start;
+        background-image: url("/images/mobile/image-hero.jpg");
+        .header__logo{
+            z-index: 1;
+        }
+
+        .header__menu-btn{
+            z-index: 1;
+            display: flex;
+            position: fixed;
+            top: 2rem;
+            right: 1rem;
+        }
+        .header__nav{
+            transition: width 0.3s ease;
+            position: fixed;
+            top: 0;
+            height: 100vh;
+            display: none;
+            .header__list{
+                padding: 1rem;
+                background-color: black;
+                height: 100%;
+                @include flex(column,center,flex-start);
+                gap: 1rem;
+                
+            }
+        }
+        .header__title{
+            min-width: 100%;
+        }
+    }
+}

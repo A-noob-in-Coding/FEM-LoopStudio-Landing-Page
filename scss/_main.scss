@@ -1,0 +1,116 @@
+.main {
+    width: 100%;
+    padding: 0rem 5rem;
+    display: grid;
+    grid-template-areas:
+        "lead button"
+        "creations creations";
+        grid-template-columns: 1fr;
+    gap: 2rem;
+    .main__lead__h2 {
+        grid-area: lead;
+        font-family: $Font-2;
+        font-size: 3rem;
+        font-weight: lighter;
+    }
+
+    .main__lead__button {
+        grid-area: button;
+        background: none;
+        @include border(1px, 0px, $Black);
+        padding: 0.5rem 2rem;
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $Black;
+            color: $White;
+        }
+    }
+
+}
+
+.main {
+    .main__creations {
+        grid-area: creations;
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        
+
+        .main__picture-mobile {
+            display: none;
+        }
+    }
+}
+
+figure {
+    position: relative;
+
+    figcaption {
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+        bottom: 2rem;
+        font-weight: lighter;
+        text-align: center;
+        color: $White;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-family: $Font-2;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            opacity: 0.4;
+        }
+
+        figcaption {
+            color: $Black;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .main {
+        grid-template-areas: 
+        "lead"
+        "creations"
+        "button";
+        padding: 0rem 2rem;
+
+            .main__lead__h2 {
+                font-size: 1.5rem;
+            }
+
+            .main__lead__button {
+                padding: 1rem;
+            }
+        
+
+        .main__creations {
+            display: flex;
+            flex-direction: column;
+
+            figure {
+                figcaption {
+                    text-align: start;
+                    padding-left: 1rem;
+                }
+            }
+
+            .main__picture-mobile {
+                display: block;
+            }
+
+            .main__picture-desktop {
+                display: none;
+            }
+        }
+    }
+}

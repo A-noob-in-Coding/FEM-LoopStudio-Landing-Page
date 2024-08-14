@@ -1,0 +1,56 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.lead{
+    position: relative;
+    margin: 0rem 2rem 0rem 2rem; 
+    .lead__interactive-mobile{
+        width: 0;
+    }
+    .lead__interactive-desktop{
+        min-width: 50%;
+        max-width: 70%;
+    }
+    .lead__des{
+        width: 60%;
+        position: absolute;
+        background-color: $White;
+        padding: 1rem;
+        right: 0;
+        bottom: -16px;
+        .lead__des__h2{
+            text-align: center;
+            font-family: $Font-1;
+            padding-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        .lead__des__p{
+            text-align: justify;
+            font-family: $Font-2;
+        }
+
+    }
+}
+
+@media screen and (max-width:767px) {
+    .lead{
+        @include flex(column,center,center);
+        .lead__interactive-mobile{
+            width:100%
+        }
+        .lead__interactive-desktop{
+            display: none;
+        }
+        .lead__des{
+            width: 100%;
+            position: initial;
+            .lead__des__h2{
+                font-size: 2rem;
+                text-align: center;
+            }
+            .lead__des__p{
+                text-align: center;
+            }
+        }
+    }
+}

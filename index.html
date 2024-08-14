@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/dist/css/index.css">
   <title>Frontend Mentor | Loopstudios landing page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
     <figure class="header__logo">
       <img src="/images/logo.svg" alt="Loopstudios logo">
     </figure>
-    <nav class="header__nav">
+    <div  class="header__menu-btn">
+      <button id="menu-button">
+        <div class="upper"></div>
+        <div class="mid"></div>
+        <div class="lower"></div>
+      </button>
+    </div>
+    <nav id="nav-menu" class="header__nav">
       <ul class="header__list">
         <li class="header__item"><a href="#">About</a></li>
         <li class="header__item"><a href="#">Careers</a></li>
@@ -21,11 +36,11 @@
         <li class="header__item"><a href="#">Support</a></li>
       </ul>
     </nav>
-    <h1 class="header__title">Immersive experiences that deliver</h1>
+    <p class="header__title">Immersive experiences that deliver</p>
   </header>
 
-  <section class="lead__interactive-desktop">
-    <figure>
+  <section class="lead">
+    <figure class="lead__interactive-desktop">
       <img src="/images/desktop/image-interactive.jpg" alt="Interactive VR experience">
     </figure>
     <figure class="lead__interactive-mobile">
@@ -34,51 +49,94 @@
     <div class="lead__des">
       <h2 class="lead__des__h2">THE LEADER IN INTERACTIVE VR</h2>
       <p class="lead__des__p">
-        Founded in 2011, Loopstudios has been producing world-class virtual reality 
-        projects for some of the best companies around the globe. Our award-winning 
-        creations have transformed businesses through digital experiences that bind 
+        Founded in 2011, Loopstudios has been producing world-class virtual reality
+        projects for some of the best companies around the globe. Our award-winning
+        creations have transformed businesses through digital experiences that bind
         to their brand.
       </p>
     </div>
   </section>
 
   <main class="main">
-    <section class="main__lead">
+    
       <h2 class="main__lead__h2">OUR CREATIONS</h2>
       <button class="main__lead__button">SEE ALL</button>
-    </section>
+    
     <section class="main__creations">
       <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-deep-earth.jpg" alt="Deep earth">
-        <img src="/images/mobile/image-deep-earth.jpg" alt="Deep earth" class="main__picture-mobile">
+        <figure>
+
+          <img class="main__picture-desktop" src="/images/desktop/image-deep-earth.jpg" alt="Deep earth">
+          <img src="/images/mobile/image-deep-earth.jpg" alt="Deep earth" class="main__picture-mobile">
+          <figcaption>
+            deep earth
+          </figcaption>
+        </figure>
       </article>
       <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-night-arcade.jpg" alt="Night arcade">
-        <img src="/images/mobile/image-night-arcade.jpg" alt="Night arcade" class="main__picture-mobile">
+        <figure>
+
+          <img class="main__picture-desktop" src="/images/desktop/image-night-arcade.jpg" alt="Night arcade">
+          <img src="/images/mobile/image-night-arcade.jpg" alt="Night arcade" class="main__picture-mobile">
+          <figcaption>
+            night arcade
+          </figcaption>
+        </figure>
+        </article>
+      <article class="main__picture">
+        <figure>
+
+          <img class="main__picture-desktop" src="/images/desktop/image-soccer-team.jpg" alt="Soccer team VR">
+          <img src="/images/mobile/image-soccer-team.jpg" alt="Soccer team VR" class="main__picture-mobile">
+          <figcaption>soccer team vr</figcaption>
+        </figure>
+        </article>
+      <article class="main__picture">
+        <figure>
+
+          <img class="main__picture-desktop" src="/images/desktop/image-grid.jpg" alt="The grid">
+          <img src="/images/mobile/image-grid.jpg" alt="The grid" class="main__picture-mobile">
+          <figcaption>
+            the grid
+          </figcaption>
+        </figure>
+        </article>
+      <article class="main__picture">
+        <figure>
+
+          <img class="main__picture-desktop" src="/images/desktop/image-from-above.jpg" alt="From up above VR">
+          <img src="/images/mobile/image-from-above.jpg" alt="From up above VR" class="main__picture-mobile">
+          <figcaption>
+            from up above vr
+          </figcaption>
+        </figure>
       </article>
       <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-soccer-team.jpg" alt="Soccer team VR">
-        <img src="/images/mobile/image-soccer-team.jpg" alt="Soccer team VR" class="main__picture-mobile">
+        <figure>
+        
+          <img class="main__picture-desktop" src="/images/desktop/image-pocket-borealis.jpg" alt="Pocket borealis">
+          <img src="/images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis" class="main__picture-mobile">
+          <figcaption>
+            pocket borealis
+          </figcaption>
+        </figure>
+        </article>
+        <article class="main__picture">
+          <figure>
+          <img class="main__picture-desktop" src="/images/desktop/image-curiosity.jpg" alt="The curiosity">
+          <img src="/images/mobile/image-curiosity.jpg" alt="The curiosity" class="main__picture-mobile">
+        <figcaption>
+          the curiosity
+        </figcaption>
+      </figure>
       </article>
       <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-grid.jpg" alt="The grid">
-        <img src="/images/mobile/image-grid.jpg" alt="The grid" class="main__picture-mobile">
-      </article>
-      <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-from-above.jpg" alt="From up above VR">
-        <img src="/images/mobile/image-from-above.jpg" alt="From up above VR" class="main__picture-mobile">
-      </article>
-      <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-pocket-borealis.jpg" alt="Pocket borealis">
-        <img src="/images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis" class="main__picture-mobile">
-      </article>
-      <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-curiosity.jpg" alt="The curiosity">
-        <img src="/images/mobile/image-curiosity.jpg" alt="The curiosity" class="main__picture-mobile">
-      </article>
-      <article class="main__picture">
-        <img class="main__picture-desktop" src="/images/desktop/image-fisheye.jpg" alt="Make it fisheye">
-        <img src="/images/mobile/image-fisheye.jpg" alt="Make it fisheye" class="main__picture-mobile">
+        <figure>
+          
+          <img class="main__picture-desktop" src="/images/desktop/image-fisheye.jpg" alt="Make it fisheye">
+          <img src="/images/mobile/image-fisheye.jpg" alt="Make it fisheye" class="main__picture-mobile">
+          <figcaption>make it fisheye</figcaption>
+        </figure>
       </article>
     </section>
   </main>
@@ -121,8 +179,12 @@
       </ul>
     </nav>
     <div class="footer__copyright">
-      © 2021 Loopstudios. All rights reserved.
+      <p>
+        © 2021 Loopstudios. All rights reserved.
+      </p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
