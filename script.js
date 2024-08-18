@@ -7,4 +7,4 @@ document.addEventListener("DOMContentLoaded", function() {
         button.classList.toggle("transition");
         navmenu.classList.toggle("visible");
     });
-});
+});zz
