@@ -26,7 +26,7 @@
 .header .header__menu-btn button .upper,
 .header .header__menu-btn button .mid,
 .header .header__menu-btn button .lower {
-  background-color: white;
+  background-color: lightgray;
   width: 2rem;
   height: 0.2rem;
   transition: translate 0.5s ease, transform 0.5s ease;
@@ -57,7 +57,7 @@
   position: relative;
   color: hsl(0, 0%, 100%);
   font-family: Alata;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-bottom: 0.25rem;
 }
 .header .header__nav .header__list .header__item a::after {
@@ -508,4 +508,6 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 6rem;
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */
